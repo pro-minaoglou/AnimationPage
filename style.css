@@ -1,0 +1,33 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Μαύρο φόντο */
+    color: white;
+    font-family: sans-serif;
+}
+
+/* Αυτό το δοχείο είναι ψηλό για να έχουμε χώρο να κάνουμε scroll */
+.animation-container {
+    height: 400vh; /* Όσο μεγαλύτερο, τόσο πιο πολύ scroll χρειάζεται για να παίξουν οι 50 εικόνες */
+    position: relative;
+}
+
+/* Ο καμβάς μένει σταθερός στην οθόνη όσο κάνουμε scroll στο animation-container */
+canvas {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Το περιεχόμενο μετά το animation */
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+}
